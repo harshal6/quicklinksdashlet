@@ -34,6 +34,8 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 git clone https://github.com/FIXME/org.civiquicklinksdashlet.git
 cv en civiquicklinksdashlet
 ```
+You need to manually add the dashboard via API Explorer and create a dashboard with dashboard url as civicrm/dashboard/quicklinks. 
+You can add quicklinks in the template directly.
 
 ## Usage
 
