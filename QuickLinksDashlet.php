@@ -1,6 +1,6 @@
 <?php
 
-require_once 'civiquicklinksdashlet.civix.php';
+require_once 'QuickLinksDashlet.civix.php';
 // phpcs:disable
 use CRM_QuickLinksDashlet_ExtensionUtil as E;
 // phpcs:enable
@@ -10,8 +10,8 @@ use CRM_QuickLinksDashlet_ExtensionUtil as E;
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
-function civiquicklinksdashlet_civicrm_config(&$config) {
-  _civiquicklinksdashlet_civix_civicrm_config($config);
+function QuickLinksDashlet_civicrm_config(&$config) {
+  _QuickLinksDashlet_civix_civicrm_config($config);
 }
 
 /**
@@ -19,8 +19,8 @@ function civiquicklinksdashlet_civicrm_config(&$config) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
  */
-function civiquicklinksdashlet_civicrm_xmlMenu(&$files) {
-  _civiquicklinksdashlet_civix_civicrm_xmlMenu($files);
+function QuickLinksDashlet_civicrm_xmlMenu(&$files) {
+  _QuickLinksDashlet_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -28,16 +28,8 @@ function civiquicklinksdashlet_civicrm_xmlMenu(&$files) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_install
  */
-function civiquicklinksdashlet_civicrm_install() {
-/**
- civicrm_initialize();
-  $result = civicrm_api3('Dashboard', 'create', [
-    'name' => "QuickLinks",
-    'label' => "QuickLinks",
-    'is_active' => 1,
-  ]);
-**/
-  _civiquicklinksdashlet_civix_civicrm_install();
+function QuickLinksDashlet_civicrm_install() {
+  _QuickLinksDashlet_civix_civicrm_install();
 }
 
 /**
@@ -45,8 +37,8 @@ function civiquicklinksdashlet_civicrm_install() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
  */
-function civiquicklinksdashlet_civicrm_postInstall() {
-  _civiquicklinksdashlet_civix_civicrm_postInstall();
+function QuickLinksDashlet_civicrm_postInstall() {
+  _QuickLinksDashlet_civix_civicrm_postInstall();
 }
 
 /**
@@ -54,20 +46,8 @@ function civiquicklinksdashlet_civicrm_postInstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_uninstall
  */
-function civiquicklinksdashlet_civicrm_uninstall() {
-  /**
-  civicrm_initialize();
-  $quick_links = civicrm_api3('Dashboard', 'get', [
-    'sequential' => 1,
-    'name' => "QuickLinks",
-  ]);
-  if (isset($result['id'])) {
-    $result = civicrm_api3('Dashboard', 'delete', [
-      'id' => $quick_links['id'],
-    ]);
-  }
-  **/
-  _civiquicklinksdashlet_civix_civicrm_uninstall();
+function QuickLinksDashlet_civicrm_uninstall() {
+  _QuickLinksDashlet_civix_civicrm_uninstall();
 }
 
 /**
@@ -75,8 +55,8 @@ function civiquicklinksdashlet_civicrm_uninstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_enable
  */
-function civiquicklinksdashlet_civicrm_enable() {
-  _civiquicklinksdashlet_civix_civicrm_enable();
+function QuickLinksDashlet_civicrm_enable() {
+  _QuickLinksDashlet_civix_civicrm_enable();
 }
 
 /**
@@ -84,8 +64,8 @@ function civiquicklinksdashlet_civicrm_enable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
  */
-function civiquicklinksdashlet_civicrm_disable() {
-  _civiquicklinksdashlet_civix_civicrm_disable();
+function QuickLinksDashlet_civicrm_disable() {
+  _QuickLinksDashlet_civix_civicrm_disable();
 }
 
 /**
@@ -93,8 +73,8 @@ function civiquicklinksdashlet_civicrm_disable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
  */
-function civiquicklinksdashlet_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _civiquicklinksdashlet_civix_civicrm_upgrade($op, $queue);
+function QuickLinksDashlet_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
+  return _QuickLinksDashlet_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -105,8 +85,8 @@ function civiquicklinksdashlet_civicrm_upgrade($op, CRM_Queue_Queue $queue = NUL
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
  */
-function civiquicklinksdashlet_civicrm_managed(&$entities) {
-  _civiquicklinksdashlet_civix_civicrm_managed($entities);
+function QuickLinksDashlet_civicrm_managed(&$entities) {
+  _QuickLinksDashlet_civix_civicrm_managed($entities);
 }
 
 /**
@@ -118,8 +98,8 @@ function civiquicklinksdashlet_civicrm_managed(&$entities) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
  */
-function civiquicklinksdashlet_civicrm_caseTypes(&$caseTypes) {
-  _civiquicklinksdashlet_civix_civicrm_caseTypes($caseTypes);
+function QuickLinksDashlet_civicrm_caseTypes(&$caseTypes) {
+  _QuickLinksDashlet_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -132,8 +112,8 @@ function civiquicklinksdashlet_civicrm_caseTypes(&$caseTypes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
  */
-function civiquicklinksdashlet_civicrm_angularModules(&$angularModules) {
-  _civiquicklinksdashlet_civix_civicrm_angularModules($angularModules);
+function QuickLinksDashlet_civicrm_angularModules(&$angularModules) {
+  _QuickLinksDashlet_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -141,8 +121,8 @@ function civiquicklinksdashlet_civicrm_angularModules(&$angularModules) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
  */
-function civiquicklinksdashlet_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _civiquicklinksdashlet_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function QuickLinksDashlet_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
+  _QuickLinksDashlet_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -152,15 +132,15 @@ function civiquicklinksdashlet_civicrm_alterSettingsFolders(&$metaDataFolders = 
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
  */
-function civiquicklinksdashlet_civicrm_entityTypes(&$entityTypes) {
-  _civiquicklinksdashlet_civix_civicrm_entityTypes($entityTypes);
+function QuickLinksDashlet_civicrm_entityTypes(&$entityTypes) {
+  _QuickLinksDashlet_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
  * Implements hook_civicrm_thems().
  */
-function civiquicklinksdashlet_civicrm_themes(&$themes) {
-  _civiquicklinksdashlet_civix_civicrm_themes($themes);
+function QuickLinksDashlet_civicrm_themes(&$themes) {
+  _QuickLinksDashlet_civix_civicrm_themes($themes);
 }
 
 // --- Functions below this ship commented out. Uncomment as required. ---
@@ -170,7 +150,7 @@ function civiquicklinksdashlet_civicrm_themes(&$themes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
  */
-//function civiquicklinksdashlet_civicrm_preProcess($formName, &$form) {
+//function QuickLinksDashlet_civicrm_preProcess($formName, &$form) {
 //
 //}
 
@@ -179,8 +159,8 @@ function civiquicklinksdashlet_civicrm_themes(&$themes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  */
-//function civiquicklinksdashlet_civicrm_navigationMenu(&$menu) {
-//  _civiquicklinksdashlet_civix_insert_navigation_menu($menu, 'Mailings', array(
+//function QuickLinksDashlet_civicrm_navigationMenu(&$menu) {
+//  _QuickLinksDashlet_civix_insert_navigation_menu($menu, 'Mailings', array(
 //    'label' => E::ts('New subliminal message'),
 //    'name' => 'mailing_subliminal_message',
 //    'url' => 'civicrm/mailing/subliminal',
@@ -188,5 +168,5 @@ function civiquicklinksdashlet_civicrm_themes(&$themes) {
 //    'operator' => 'OR',
 //    'separator' => 0,
 //  ));
-//  _civiquicklinksdashlet_civix_navigationMenu($menu);
+//  _QuickLinksDashlet_civix_navigationMenu($menu);
 //}
