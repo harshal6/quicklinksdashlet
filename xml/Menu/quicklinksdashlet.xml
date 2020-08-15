@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/dashlet/quicklinks</path>
+    <page_callback>CRM_QuickLinksDashlet_Page_QuickLinks</page_callback>
+    <title>QuickLinksDashlet</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
